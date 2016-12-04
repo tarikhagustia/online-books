@@ -14,4 +14,8 @@ class Templates extends TemplatesController
   {
     $this->load->view('admin_v', $data);
   }
+  public function get_admin_login_templates($data)
+  {
+    $this->load->view('admin_login_v', $data);
+  }
 }
