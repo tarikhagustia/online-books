@@ -22,4 +22,12 @@ class Templates extends TemplatesController
   {
     $this->load->view('admin_login_v', $data);
   }
+  public function get_user_login_templates($data)
+  {
+    $this->load->view('user_login_v', $data);
+  }
+  public function get_user_register_templates($data)
+  {
+    $this->load->view('user_register_v', $data);
+  }
 }

@@ -9,7 +9,7 @@ class Auth_m extends CI_Model
   public function check_login_admin($username, $password)
   {
     $this->db->select('username, password')->from('user')
-    ->where('username', $username)->where('password', $password);
+    ->where('username', $username)->where('password', modules::run('password/hash', $password));
     $get = $this->db->get();
     if(count($get->result()) > 0):
       if($this->check_active($username)):
@@ -25,7 +25,9 @@ class Auth_m extends CI_Model
   private function check_active($username)
   {
     $query = $this->db->select('is_active')->from('user')
-    ->where('username' , $username)->get();
+    ->where('username' , $username)
+    ->where('is_active' , FALSE)
+    ->get();
     $data = $query->result();
     foreach ($data as $key => $value) {
       return $value->is_active;
