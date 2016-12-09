@@ -10,9 +10,9 @@ class Templates extends TemplatesController
   {
 
   }
-  public function get_main_templates()
+  public function get_main_templates($data)
   {
-    $this->load->view('user_main_v');
+    $this->load->view('user_main_v', $data);
   }
   public function get_admin_templates($data)
   {

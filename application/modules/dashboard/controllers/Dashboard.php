@@ -8,7 +8,8 @@ class Dashboard extends UserDashboard
   }
   public function index()
   {
-    $this->templates->get_main_templates([]);
+    $data['content'] = 'dashboard/home_v';
+    $this->templates->get_main_templates($data);
   }
 }
 

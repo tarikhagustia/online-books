@@ -1,5 +1,5 @@
 <?php
-class Auth extends AdminController
+class Auth extends UserController
 {
   public function __construct()
   {
@@ -31,6 +31,7 @@ class Auth extends AdminController
   }
   public function login_do()
   {
+    $username = $this->input->post('username');
     $this->form_validation->set_rules('username' , 'Username' , 'required|trim',
       ['required' => 'Kolom {field} tidak boleh kosong, silahkan isi']
     );
@@ -39,6 +40,7 @@ class Auth extends AdminController
       $this->templates->get_admin_login_templates([]);
     else:
       $this->set_sessions($username);
+      redirect('myadmin');
     endif;
   }
   public function set_sessions($username)
