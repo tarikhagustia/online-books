@@ -259,7 +259,7 @@
                                             </a>
                                             <ul class="dropdown-menu pull-left">
                                                 <li class=" ">
-                                                    <a href="dashboard_3.html" class="nav-link  ">
+                                                    <a href="<?=  base_url('dashboard/upload/?type=book') ?>" class="nav-link  ">
                                                         <i class="icon-graph"></i> Upload Buku
                                                     </a>
                                                 </li>
