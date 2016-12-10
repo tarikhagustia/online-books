@@ -1,5 +1,8 @@
 res/*
 resource/*.jpg
+resource/books/*.pdf
+resource/books/*.jpg
+resource/books/*.png
 resource/*.png
 resource/*.pdf
 resource/*.doc
