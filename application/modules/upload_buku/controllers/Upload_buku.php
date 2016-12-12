@@ -67,7 +67,7 @@ class Upload_buku extends UserDashboard
 
       //  Book Source
       $config['upload_path'] = $upload_dir . 'books/';
-      $config['allowed_types'] = 'jpg|png';
+      $config['allowed_types'] = 'pdf';
       $config['file_name'] = $this->format->seoUrl($this->input->post('book_name'));
       // Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
       $this->upload->initialize($config);
