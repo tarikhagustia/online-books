@@ -27,7 +27,8 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-dropdown classic-menu-dropdown ">
+
+        <!-- <li class="menu-dropdown classi  c-menu-dropdown ">
             <a href="javascript:;"> Upload
                 <span class="arrow"></span>
             </a>
@@ -38,6 +39,6 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
     </ul>
 </div>

@@ -67,4 +67,7 @@ $route['category/(:any)']['get'] = 'category/view_category/$1';
 $route['myadmin']['get'] = 'admin_dashboard/index';
 $route['myadmin/signin']['get'] = 'auth/login';
 $route['myadmin/signin']['post'] = 'auth/login_do';
+$route['myadmin/materi']['get'] = 'admin_materi/view';
+$route['myadmin/materi/upload']['get'] = 'admin_upload/upload';
+$route['myadmin/materi/upload']['post'] = 'admin_upload/upload/save';
 $route['logout']['get'] = 'auth/logout';

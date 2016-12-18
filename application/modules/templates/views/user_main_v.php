@@ -66,18 +66,21 @@
 
                                         <!-- END INBOX DROPDOWN -->
                                         <!-- BEGIN USER LOGIN DROPDOWN -->
+                                        <?php if ($this->session->login == true): ?>
                                         <li class="dropdown dropdown-user dropdown-dark">
                                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                                 <img alt="" class="img-circle" src="<?php echo base_url() ?>assets/layouts/layout3/img/avatar9.jpg">
                                                 <span class="username username-hide-mobile"><?php echo $this->session->full_name; ?></span>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-default">
+                                              <ul class="dropdown-menu dropdown-menu-default">
                                                 <li class="divider"> </li>
                                                 <li>
-                                                    <a href="<?php echo base_url('logout') ?>">
-                                                        <i class="icon-key"></i> Log Out </a>
-                                                </li>
-                                            </ul>
+                                                  <a href="<?php echo base_url('logout') ?>">
+                                                    <i class="icon-key"></i> Log Out </a>
+                                                  </li>
+                                                </ul>
+
+                                            <?php endif; ?>
                                         </li>
                                         <!-- END USER LOGIN DROPDOWN -->
                                         <!-- BEGIN QUICK SIDEBAR TOGGLER -->
