@@ -1,4 +1,9 @@
 <div class="x_panel">
+  <?php if ($this->session->flashdata()): ?>
+    <div class="alert alert-success">
+      <?php echo $this->session->flashdata('status') ?>
+    </div>
+  <?php endif; ?>
   <div class="x_title">
     <h2>List Materi</h2>
     <div class="clearfix"></div>
@@ -23,7 +28,7 @@
               <td><?php echo $value->book_name; ?></td>
               <td><?php echo $value->book_sheet; ?></td>
               <td><?php echo $value->created_at; ?></td>
-              <td><?php echo anchor(base_url('myadmin/materi/edit/'. $value->book_id), 'Edit') ?>   | Hapus</td>
+              <td><?php echo anchor(base_url('myadmin/materi/edit/'. $value->book_id), 'Edit') ?>   | <a href="<?= base_url('myadmin/materi/hapus/'. $value->book_id) ?>" onClick = "return confirm('Apakah anda yakin igin menghapus Materi ini')">Hapus</a></td>
             </tr>
           <?php endforeach; ?>
 

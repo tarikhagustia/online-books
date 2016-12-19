@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'home';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
@@ -68,6 +68,9 @@ $route['myadmin']['get'] = 'admin_dashboard/index';
 $route['myadmin/signin']['get'] = 'auth/login';
 $route['myadmin/signin']['post'] = 'auth/login_do';
 $route['myadmin/materi']['get'] = 'admin_materi/view';
+$route['myadmin/materi/edit']['post'] = 'admin_materi/edit_save';
+$route['myadmin/materi/hapus/(:num)'] = 'admin_materi/delete/$1';
+$route['myadmin/materi/edit/(:num)']['get'] = 'admin_materi/edit/$1';
 $route['myadmin/materi/upload']['get'] = 'admin_upload/upload';
 $route['myadmin/materi/upload']['post'] = 'admin_upload/upload/save';
 $route['logout']['get'] = 'auth/logout';
