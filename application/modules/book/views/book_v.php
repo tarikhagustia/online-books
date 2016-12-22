@@ -15,6 +15,13 @@
                 <li>
                   <img src="<?php echo base_url($book_data->book_images) ?>" class="img-responsive pic-bordered" alt="<?php echo $book_data->book_name ?>" />
                 </li>
+                <?php if ($book_data->is_free): ?>
+                  <li>
+                    <div class="alert alert-success text-center">
+                      GRATIS
+                    </div>
+                  </li>
+                <?php endif; ?>
               </ul>
             </div>
             <div class="col-md-9">
@@ -62,20 +69,8 @@
                     <div class="portlet-body">
                       <ul class="list-unstyled">
                         <li>
-                          <span class="sale-info"> Pembaca hari ini
-                            <i class="fa fa-img-up"></i>
-                          </span>
-                          <span class="sale-num"> 23 </span>
-                        </li>
-                        <li>
-                          <span class="sale-info"> Pembaca Minggu ini
-                            <i class="fa fa-img-down"></i>
-                          </span>
-                          <span class="sale-num"> 87 </span>
-                        </li>
-                        <li>
                           <span class="sale-info"> Total pembaca</span>
-                          <span class="sale-num"> 2377 </span>
+                          <span class="sale-num"> <?= count($reader); ?> </span>
                         </li>
                       </ul>
                     </div>
@@ -105,14 +100,20 @@
                                       </tr>
                                     </thead>
                                       <tbody>
-                                        <tr>
-                                          <td>
-                                            <a href="#">tarikhagustia</a>
-                                          </td>
-                                          <td>
-                                            Tanggal
-                                          </td>
-                                        </tr>
+                                        <?php foreach ($reader as $key => $value): ?>
+                                          <tr>
+                                            <td>
+                                              <a href="#"><?= $value->full_name ?></a>
+                                            </td>
+                                            <td>
+
+                                              <?php
+                                              // echo timespan($post_date, $now, $units);
+                                              echo timespan(mysql_to_unix($value->created_at), time()). " ago";
+                                              ?>
+                                            </td>
+                                          </tr>
+                                        <?php endforeach; ?>
                                       </tbody>
                                     </table>
                                       </div>
