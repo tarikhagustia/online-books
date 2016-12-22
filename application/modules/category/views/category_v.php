@@ -19,7 +19,7 @@
                                   <div class="mt-overlay">
                                       <ul class="mt-info">
                                           <li>
-                                              <a class="btn default btn-outline" href="javascript:;">
+                                              <a class="btn default btn-outline" href="<?= base_url('book/view/'. $value->book_url) ?>">
                                                   BACA
                                               </a>
                                           </li>

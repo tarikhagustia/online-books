@@ -34,6 +34,21 @@
                       <a href="#"><i class="fa fa-briefcase"></i><?php echo $book_data->category_name ?></a>
                   </li>
                   </ul>
+                  <?php if ($this->session->flashdata()): ?>
+                    <div class="alert alert-success">
+                      <?php echo $this->session->flashdata('status') ?>
+                    </div>
+                  <?php endif; ?>
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" name="button" class="btn btn-primary">Baca</button>
+                        <?php if ($book_data->library_id == null): ?>
+                          <a href="<?= base_url('perpustakaan/simpan/'. $book_data->book_url) ?>" class="btn btn-warning">Simpan Ke Perpustakaan</a>
+                        <?php else: ?>
+                          <a href="#" class="btn btn-warning" disabled>Materi sudah ada di perpustakaan anda</a>
+                        <?php endif; ?>
+                    </div>
+                  </div>
                 </div>
                             <!--end col-md-8-->
                 <div class="col-md-4">

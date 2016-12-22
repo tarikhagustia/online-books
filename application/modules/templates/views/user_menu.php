@@ -27,7 +27,26 @@
                 </li>
             </ul>
         </li>
-
+        <li class="menu-dropdown mega-menu-dropdown  ">
+            <a href="javascript:;"> Perpustakaan
+                <span class="arrow"></span>
+            </a>
+            <ul class="dropdown-menu" style="min-width: 710px">
+                <li>
+                    <div class="mega-menu-content">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="mega-menu-submenu">
+                                    <li>
+                                        <a href="<?php echo base_url('library/list') ?>">Daftar materi</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
         <!-- <li class="menu-dropdown classi  c-menu-dropdown ">
             <a href="javascript:;"> Upload
                 <span class="arrow"></span>
