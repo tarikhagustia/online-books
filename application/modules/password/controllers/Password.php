@@ -10,7 +10,7 @@ class Password extends MY_Controller
     public function hash($password = 1234)
     {
       $hash = $this->config->item('vendor_hash');
-      $passowrd = $password . $hash;
+      $password = $password . $hash;
       return md5($password);
     }
 }

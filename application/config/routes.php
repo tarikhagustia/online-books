@@ -73,5 +73,11 @@ $route['myadmin/materi/hapus/(:num)'] = 'admin_materi/delete/$1';
 $route['myadmin/materi/edit/(:num)']['get'] = 'admin_materi/edit/$1';
 $route['myadmin/materi/upload']['get'] = 'admin_upload/upload';
 $route['myadmin/materi/upload']['post'] = 'admin_upload/upload/save';
-$route['myadmin/user/list']['get'] = 'admin_user/list';
+$route['myadmin/user/list']['get'] = 'admin_user/show';
+$route['myadmin/user/new']['get'] = 'admin_user/new_form';
+$route['myadmin/user/new']['post'] = 'admin_user/new_save';
+$route['myadmin/user/delete/(:num)'] = 'admin_user/delete/$1';
+$route['myadmin/user/edit/(:num)']['get'] = 'admin_user/edit_form/$1';
+$route['myadmin/user/edit']['post'] = 'admin_user/edit_save';
+
 $route['logout']['get'] = 'auth/logout';
