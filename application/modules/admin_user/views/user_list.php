@@ -1,6 +1,6 @@
 <div class="x_panel">
   <div class="x_title">
-    <h2>Daftar Pengguna</h2>
+    <h2>Plain Page</h2>
     <ul class="nav navbar-right panel_toolbox">
       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
       </li>
@@ -20,7 +20,7 @@
   </div>
   <div class="x_content">
     <div class="table-responsive">
-      <table class="table table-striped jambo_table">
+                    <table class="table table-striped jambo_table bulk_action">
                       <thead>
                         <tr class="headings">
                           <th>
@@ -177,6 +177,6 @@
                         </tr>
                       </tbody>
                     </table>
-    </div>
+                  </div>
   </div>
 </div>

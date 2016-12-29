@@ -48,7 +48,7 @@
                   <?php endif; ?>
                   <div class="row">
                     <div class="col-sm-12">
-                        <button type="button" name="button" class="btn btn-primary">Baca</button>
+                        <a href="<?php echo base_url('book/read/'. $book_data->book_url) ?>" class="btn btn-primary">Baca</a>
                         <?php if ($book_data->library_id == null): ?>
                           <a href="<?= base_url('perpustakaan/simpan/'. $book_data->book_url) ?>" class="btn btn-warning">Simpan Ke Perpustakaan</a>
                         <?php else: ?>

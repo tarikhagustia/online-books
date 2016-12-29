@@ -45,7 +45,7 @@ class Auth extends UserController
   }
   public function set_sessions($username)
   {
-    $this->db->select('user_id, full_name, email, group_id')
+    $this->db->select('user_id, is_pay, full_name, email, group_id')
     ->from('user')
     ->where('username' , $username);
     $get = $this->db->get();

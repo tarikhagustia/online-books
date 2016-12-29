@@ -73,4 +73,5 @@ $route['myadmin/materi/hapus/(:num)'] = 'admin_materi/delete/$1';
 $route['myadmin/materi/edit/(:num)']['get'] = 'admin_materi/edit/$1';
 $route['myadmin/materi/upload']['get'] = 'admin_upload/upload';
 $route['myadmin/materi/upload']['post'] = 'admin_upload/upload/save';
+$route['myadmin/user/list']['get'] = 'admin_user/list';
 $route['logout']['get'] = 'auth/logout';

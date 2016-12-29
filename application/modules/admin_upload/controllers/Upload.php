@@ -15,7 +15,7 @@ class Upload extends AdminController
   }
   public function save()
   {
-    
+
     $upload_dir = './resource/';
     $book_name = $this->input->post('book_name');
     $book_sheet = $this->input->post('book_sheet');
@@ -81,7 +81,7 @@ class Upload extends AdminController
        else
        {
           $data = array('upload_data' => $this->upload->data());
-          $book_path = $upload_dir . 'book/' . $this->upload->data('file_name');
+          $book_path = $upload_dir . 'books/' . $this->upload->data('file_name');
           $book_upload = true;
        }
        if($cover_upload == true && $book_upload == true):
