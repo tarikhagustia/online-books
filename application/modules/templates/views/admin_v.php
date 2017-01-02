@@ -60,6 +60,11 @@
                       <li><a href="<?php echo base_url('myadmin/user/list') ?>"> List Pengguna </a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-home"></i> Kategori <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url('myadmin/category') ?>"> Atur Kategori </a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>

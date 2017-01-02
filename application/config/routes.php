@@ -79,5 +79,11 @@ $route['myadmin/user/new']['post'] = 'admin_user/new_save';
 $route['myadmin/user/delete/(:num)'] = 'admin_user/delete/$1';
 $route['myadmin/user/edit/(:num)']['get'] = 'admin_user/edit_form/$1';
 $route['myadmin/user/edit']['post'] = 'admin_user/edit_save';
+$route['myadmin/category'] = 'admin_category/index';
+$route['myadmin/category/new']['get'] = 'admin_category/new';
+$route['myadmin/category/new']['post'] = 'admin_category/save_category';
+$route['myadmin/category/delete/(:num)'] = 'admin_category/hapus/$1';
+$route['myadmin/category/edit/(:num)'] = 'admin_category/edit_form/$1';
+$route['myadmin/category/edit/save'] = 'admin_category/edit_save';
 
 $route['logout']['get'] = 'auth/logout';
