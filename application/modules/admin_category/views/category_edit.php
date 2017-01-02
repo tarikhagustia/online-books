@@ -1,6 +1,6 @@
 <div class="x_panel">
   <div class="x_title">
-    <h2>Buat Kategori Baru</h2>
+    <h2>Edit Kategori</h2>
     <div class="clearfix"></div>
   </div>
   <div class="x_content">
