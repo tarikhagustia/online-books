@@ -51,20 +51,20 @@ class Upload extends AdminController
 
       // Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
       $this->upload->initialize($config);
-      if ( ! $this->upload->do_upload('book_cover'))
-       {
-               $this->session->set_flashdata('danger', $this->upload->display_errors());
-               $cover_upload = false;
-               redirect('myadmin/materi/upload');
-              //  $this->load->view('upload_form', $error);
-       }
-       else
-       {
-          $data = array('upload_data' => $this->upload->data());
-          $cover_path = $upload_dir . $this->upload->data('file_name');
-          $cover_upload = true;
-       }
-
+      // if ( ! $this->upload->do_upload('book_cover'))
+      //  {
+      //          $this->session->set_flashdata('danger', $this->upload->display_errors());
+      //          $cover_upload = false;
+      //          redirect('myadmin/materi/upload');
+      //         //  $this->load->view('upload_form', $error);
+      //  }
+      //  else
+      //  {
+      //     $data = array('upload_data' => $this->upload->data());
+      //     $cover_path = $upload_dir . $this->upload->data('file_name');
+      //     $cover_upload = true;
+      //  }
+      $cover_upload = true;
       //  Book Source
       $config['upload_path'] = $upload_dir . 'books/';
       $config['allowed_types'] = 'pdf|doc|ppt';
@@ -98,7 +98,6 @@ class Upload extends AdminController
            'user_id' => $this->session->user_id,
            'category_id' => $category_id,
            'book_description' => $book_description,
-           'book_images' => $cover_path,
            'book_source' => $book_path,
            'is_free' => $is_free,
            'is_active' => true

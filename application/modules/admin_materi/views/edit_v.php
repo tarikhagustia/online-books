@@ -33,13 +33,13 @@
                     <input type="text" name="book_sheet" class="form-control" value="<?php echo $materis->book_sheet ?>" />
                 </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="control-label col-md-3" for="book_sheet">Pilih Cover Materi</label>
                 <div class="col-md-9">
                   <input type="file" name="book_cover">
                   <span class="help-block">Hanya bisa JPG dan PNG</span>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label class="control-label col-md-3" for="book_sheet">Pilih Materi</label>
                 <div class="col-md-9">
