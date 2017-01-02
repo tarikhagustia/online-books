@@ -13,7 +13,7 @@
             <div class="col-md-3">
               <ul class="list-unstyled profile-nav">
                 <li>
-                  <img src="<?php echo base_url($book_data->book_images) ?>" class="img-responsive pic-bordered" alt="<?php echo $book_data->book_name ?>" />
+                  <img src="<?php echo base_url('images/thumb_create/' . base64_encode($book_data->book_source)) ?>" class="img-responsive pic-bordered" alt="<?php echo $book_data->book_name ?>" />
                 </li>
                 <?php if ($book_data->is_free): ?>
                   <li>

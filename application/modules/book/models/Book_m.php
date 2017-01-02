@@ -3,7 +3,7 @@ class Book_m extends CI_Model
 {
   public function get_book_data($book_url)
   {
-    $this->db->select('book.book_id, is_free, library.library_id, book_source, book_name, book_url, book_images, category_name, book_description, book.created_at')->from('book')
+    $this->db->select('book_source, book.book_id, is_free, library.library_id, book_source, book_name, book_url, book_images, category_name, book_description, book.created_at')->from('book')
     ->join('category' , 'book.category_id = category.category_id');
     if ($this->session->login) {
       $this->db->join('library', 'library.book_id = book.book_id', 'left');

@@ -7,7 +7,7 @@ class Category_m extends CI_Model
   }
   public function get_book_data($category_url)
   {
-    $this->db->select('book_name, book_images, book_url, book_id, category.category_id, category_name')
+    $this->db->select('book_source, book_name, book_images, book_url, book_id, category.category_id, category_name')
     ->from('book')
     ->join('category', 'book.category_id = category.category_id')
     ->where('category_url', $category_url);

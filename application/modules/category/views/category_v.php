@@ -15,7 +15,7 @@
                       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                           <div class="mt-card-item">
                               <div class="mt-card-avatar mt-overlay-1">
-                                  <img src="<?= base_url($value->book_images) ?>" />
+                                  <img src="<?php echo base_url('images/thumb_create/' . base64_encode($value->book_source )) ?>" />
                                   <div class="mt-overlay">
                                       <ul class="mt-info">
                                           <li>
