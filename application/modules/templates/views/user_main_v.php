@@ -250,15 +250,7 @@
                             <div class="page-content">
                                 <div class="container">
                                     <!-- BEGIN PAGE BREADCRUMBS -->
-                                    <ul class="page-breadcrumb breadcrumb">
-                                        <li>
-                                            <a href="index.html">Home</a>
-                                            <i class="fa fa-circle"></i>
-                                        </li>
-                                        <li>
-                                            <span>Layouts</span>
-                                        </li>
-                                    </ul>
+
                                     <!-- END PAGE BREADCRUMBS -->
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
@@ -303,27 +295,9 @@
             </a>
             <ul>
                 <li>
-                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
-                        <span>Purchase Metronic</span>
+                    <a href="http://allblue.technology" target="_blank" class="active">
+                        <span>This for demo Purpose, more information click me !</span>
                         <i class="icon-basket"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenthemes" target="_blank">
-                        <span>Customer Reviews</span>
-                        <i class="icon-users"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://keenthemes.com/showcast/" target="_blank">
-                        <span>Showcase</span>
-                        <i class="icon-user"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://keenthemes.com/metronic-theme/changelog/" target="_blank">
-                        <span>Changelog</span>
-                        <i class="icon-graph"></i>
                     </a>
                 </li>
             </ul>

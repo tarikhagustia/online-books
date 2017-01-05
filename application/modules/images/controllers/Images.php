@@ -7,13 +7,15 @@ class Images extends UserController
   }
   public function thumb_create($link = null , $page = 0)
   {
-    $link = base64_decode($link);
+
+    $link = base64_decode($this->input->get('image'));
     $link = $link . '[' . $page . ']';
-    $im = new imagick($link);
-    $im->setImageFormat('jpg');
+    $imagick = new \Imagick($link);
+    $imagick->resizeImage(250, 350, \Imagick::FILTER_LANCZOS, 1, false);
+    $imagick->setImageFormat('png');
     $this->output
-        ->set_content_type('jpeg')
-        ->set_output($im);
+        ->set_content_type('png')
+        ->set_output($imagick->getImageBlob());
   }
   public function test()
   {

@@ -49,7 +49,7 @@
 								<br />
 								<div>
 									<h1><i class="fa fa-gear" style="font-size: 26px;"></i> myadmin</h1>
-									<p>Myadmin - Powered by <a href="<?php echo $this->config->item('hash_key_url') ?>"><?php echo $this->config->item('hash_key') ?></a></p>
+									<p>Myadmin - Powered by <a href="<?php echo $this->config->item('vendor_url') ?>"><?php echo $this->config->item('vendor_name') ?></a></p>
 								</div>
 							</div>
 						<?php echo form_close();  ?>

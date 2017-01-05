@@ -21,5 +21,12 @@ class Dashboard_m extends CI_Model
     $get = $this->db->get()->result();
     return count($get);
   }
+  public function get_books()
+  {
+    $this->db->select('*')->from('book')
+    ->join('category', 'category.category_id = book.category_id');
+    $data = $this->db->get();
+    return $data->result();
+  }
 }
  ?>
