@@ -86,5 +86,6 @@ $route['myadmin/category/new']['post'] = 'admin_category/save_category';
 $route['myadmin/category/delete/(:num)'] = 'admin_category/hapus/$1';
 $route['myadmin/category/edit/(:num)'] = 'admin_category/edit_form/$1';
 $route['myadmin/category/edit/save'] = 'admin_category/edit_save';
-
+$route['myadmin/author/edit']['get'] = 'admin_author/edit_profile';
+$route['myadmin/author/edit']['post'] = 'admin_author/edit_save';
 $route['logout']['get'] = 'auth/logout';

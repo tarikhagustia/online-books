@@ -47,6 +47,52 @@
                 </li>
             </ul>
         </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+            <a href="<?php echo base_url('article') ?>">
+              Artikel
+            </a>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+            <a href="<?php echo base_url('faqs') ?>">
+              FAQs
+            </a>
+        </li>
+        <?php if (!$this->session->login): ?>
+
+        <li class="menu-dropdown mega-menu-dropdown  ">
+            <a href="javascript:;"> Member
+                <span class="arrow"></span>
+            </a>
+            <ul class="dropdown-menu" style="min-width: 710px">
+                <li>
+                    <div class="mega-menu-content">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="mega-menu-submenu">
+                                    <li>
+                                        <a href="<?php echo base_url('signup') ?>">Registrasi</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mega-menu-content">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="mega-menu-submenu">
+                                    <li>
+                                        <a href="<?php echo base_url('signin') ?>">Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+          </li>
+        <?php endif; ?>
         <!-- <li class="menu-dropdown classi  c-menu-dropdown ">
             <a href="javascript:;"> Upload
                 <span class="arrow"></span>

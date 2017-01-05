@@ -21,5 +21,11 @@ class Images extends UserController
   {
     modules::run('images/thumb_create');
   }
+  public function gravatar($email)
+  {
+    // $email = $this->input->get('email');
+    $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . '?d=monsterid';
+    return $grav_url;
+  }
 }
  ?>

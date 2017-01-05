@@ -68,7 +68,7 @@
                                         <?php if ($this->session->login == true): ?>
                                         <li class="dropdown dropdown-user dropdown-dark">
                                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <img alt="" class="img-circle" src="<?php echo base_url() ?>assets/layouts/layout3/img/avatar9.jpg">
+                                                <img alt="Foto Profil" class="img-circle" src="<?php echo modules::run('images/gravatar', $this->session->username) ?>">
                                                 <span class="username username-hide-mobile"><?php echo $this->session->full_name; ?></span>
                                             </a>
                                               <ul class="dropdown-menu dropdown-menu-default">
@@ -98,7 +98,7 @@
                         <div class="page-header-menu">
                             <div class="container">
                                 <!-- BEGIN HEADER SEARCH BOX -->
-                                <form class="search-form" action="page_general_search.html" method="GET">
+                                <!-- <form class="search-form" action="page_general_search.html" method="GET">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Search" name="query">
                                         <span class="input-group-btn">
@@ -107,7 +107,7 @@
                                             </a>
                                         </span>
                                     </div>
-                                </form>
+                                </form> -->
                                 <!-- END HEADER SEARCH BOX -->
                                 <!-- BEGIN MEGA MENU -->
                                 <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
@@ -327,6 +327,7 @@
         <script src="<?php echo base_url() ?>assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
         <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+        <?php echo put_headers(); ?>
         <!-- END THEME LAYOUT SCRIPTS -->
     </body>
 

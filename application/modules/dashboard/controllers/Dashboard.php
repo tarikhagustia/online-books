@@ -18,6 +18,9 @@ class Dashboard extends UserController
   public function userDashboard()
   {
     // die();
+    add_js(base_url('assets/vendors/owl-carousel/dist/owl.carousel.min.js'));
+    add_js(base_url('assets/js/dashboard.js'));
+    $data['author'] = $this->dashboard_m->get_author();
     $data['page_title'] = 'Selamat datang di Baca Online';
     $data['content'] = 'dashboard/home_book_v';
     $data['book_data'] = $this->dashboard_m->get_books();

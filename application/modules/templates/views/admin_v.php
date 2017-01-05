@@ -65,6 +65,11 @@
                       <li><a href="<?php echo base_url('myadmin/category') ?>"> Atur Kategori </a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-home"></i> Profile Author <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url('myadmin/author/edit') ?>"> Ganti Profile </a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -101,7 +106,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Page</h3>
+                <h3>Myadmin Version 1.0 Beta</h3>
               </div>
 
               <div class="title_right">
@@ -132,7 +137,8 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a> | Engine by <a href="<?= $this->config->item('vendor_url') ?>"> <?= $this->config->item('vendor_name') ?></a>
+
           </div>
           <div class="clearfix"></div>
         </footer>

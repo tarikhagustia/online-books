@@ -28,5 +28,10 @@ class Dashboard_m extends CI_Model
     $data = $this->db->get();
     return $data->result();
   }
+  public function get_author()
+  {
+    $data = $this->db->get('author');
+    return $data->row();
+  }
 }
  ?>
