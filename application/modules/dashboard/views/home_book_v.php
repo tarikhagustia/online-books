@@ -7,7 +7,7 @@
     <div class="prfile-body" style="margin-top: 20px;">
       <div class="col-sm-2">
         <div class="profile-picture" style="margin-top: 20px;">
-          <img class="center-block img-responsive circle" src="<?php echo modules::run('images/gravatar' , $author->author_email) ?>" alt="Hidayat Kampai" style="" width="100%"/>
+          <img class="center-block img-responsive circle" src="<?php echo base_url($author->author_img); ?>" alt="<?= $author->author_name ?>" style="" width="100%"/>
         </div>
       </div>
       <div class="col-sm-10">
