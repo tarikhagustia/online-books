@@ -36,4 +36,24 @@ class Admin_article extends AdminController {
     $this->session->set_flashdata('success', 'Berhasil menghapus data');
     redirect('myadmin/article/list');
   }
+  public function edit_view($article_id = null)
+  {
+    $data['content'] = 'admin_article/edit_v';
+    $data['article'] = $this->db->get_where('article', ['article_id' =>  $article_id])->row();
+    $this->templates->get_admin_templates($data);
+  }
+
+  public function edit_save()
+  {
+    $data = [
+      'article_url' => $this->format->seoUrl($this->input->post('article_name')),
+      'article_id' => $this->input->post('article_id'),
+      'article_name' => $this->input->post('article_name'),
+      'article_category' => $this->input->post('article_category'),
+      'article_desc' => $this->input->post('article_desc')
+    ];
+    $this->db->replace('article', $data);
+    $this->session->set_flashdata('success' , 'Sukses merubah artikel');
+    redirect('myadmin/article/list');
+  }
 }

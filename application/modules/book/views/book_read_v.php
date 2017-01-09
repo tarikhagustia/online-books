@@ -23,7 +23,7 @@
         <div class="alert alert-success">
           Maaf anda harus menjadi <strong>Premium member</strong> untuk Membaca / Mendownload Materi ini.
           <p>
-            <a href="<?php echo base_url('upgrade') ?>">Cara menjadi premium member</a>
+            <a href="<?php echo base_url('faqs') ?>">Cara menjadi premium member</a>
           </p>
         </div>
       <?php endif; ?>

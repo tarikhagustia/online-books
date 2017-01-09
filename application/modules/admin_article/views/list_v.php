@@ -28,9 +28,11 @@
               <?php echo $value->article_category; ?>
             </td>
             <td>
-              <?php echo $value->created_at; ?>
+              <?php echo $value->updated_at; ?>
             </td>
             <td>
+              <a href="<?php echo base_url('myadmin/article/edit/'. $value->article_id); ?>">Edit</a>
+              |
               <a href="<?php echo base_url('myadmin/article/delete/'. $value->article_id); ?>">Hapus</a>
             </td>
           </tr>

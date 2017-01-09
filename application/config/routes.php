@@ -92,4 +92,9 @@ $route['myadmin/article/new']['get'] = 'admin_article/new_article';
 $route['myadmin/article/new']['post'] = 'admin_article/save_article';
 $route['myadmin/article/list']['get'] = 'admin_article/list';
 $route['myadmin/article/delete/(:num)']['get'] = 'admin_article/hapus/$1';
+$route['myadmin/article/edit/(:num)']['get'] = 'admin_article/edit_view/$1';
+$route['myadmin/article/edit']['post'] = 'admin_article/edit_save';
+
+/* ====================== ARTICLE ========================== */
+$route['faqs'] = 'article/faqs';
 $route['logout']['get'] = 'auth/logout';
