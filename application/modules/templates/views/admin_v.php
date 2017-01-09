@@ -32,21 +32,24 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="<?php echo base_url() ?>/assets/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
                 <h2><?php echo $this->session->full_name ?></h2>
               </div>
             </div>
+
             <!-- /menu profile quick info -->
 
+            <br />
+            <br />
+            <br />
             <br />
 
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
+                <h3></h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Materi <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -94,7 +97,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo base_url() ?>/assets/images/img.jpg" alt=""><?php echo $this->session->full_name ?>
+                    <?php echo $this->session->full_name ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
