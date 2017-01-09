@@ -1,5 +1,5 @@
 .profile-header {
-  height:250px;
+  min-height:250px;
   color: white;
   /*background-image:url(../media/bg/5.jpg); */
   background: #154264;
