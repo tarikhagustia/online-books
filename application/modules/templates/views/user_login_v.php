@@ -52,7 +52,7 @@
             <!-- BEGIN LOGIN FORM -->
             <!-- <form class="login-form" action="index.html" method="post"> -->
                 <p>
-                  <?php echo validation_errors(); ?>
+                  <?php echo validation_errors('<div class="alert alert-danger">' , '</div>'); ?>
                 </p>
                 <?php echo form_open('signin' , ['class' => 'login-form']) ?>
                 <div class="form-title">

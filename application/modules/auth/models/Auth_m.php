@@ -12,7 +12,7 @@ class Auth_m extends CI_Model
     ->where('username', $username)->where('password', modules::run('password/hash', $password));
     $get = $this->db->get();
     if(count($get->result()) > 0):
-      if($this->check_active($username)):
+      if($this->check_active($username) == "0"):
         $this->error_msg = "Username " . $username ." belum aktif, silahkan Aktifasi akun anda";
         return false;
       endif;

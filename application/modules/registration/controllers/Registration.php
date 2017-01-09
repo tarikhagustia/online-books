@@ -32,11 +32,17 @@ class Registration extends UserController
           'password' => modules::run('password/hash', $this->input->post('password')),
           'full_name' => $this->input->post('fullname'),
           'group_id' => 3,
+          'key' => modules::run('password/get_key', $this->input->post('email')),
           'email' => $this->input->post('email'),
-          'is_active' => true
+          'is_active' => false
         ];
         $insert = $this->db->insert('user' , $data);
-        $this->session->set_flashdata('success' , 'Terimakasih telah melakukan pendaftaran, silahkan Login');
+        // Set avtivation
+        $to = $this->input->post('email');
+        $subject = "Tinggal selangkah lagi, Aktifkan akun anda";
+        $body = $this->load->view('email_v' , $data , true);
+        modules::run('email/send' , $to , $subject , $body);
+        $this->session->set_flashdata('success' , 'Terimakasih telah melakukan pendaftaran, silahkan cek email anda, kami telah mengirimkan link aktifasi');
         redirect('signin');
       endif;
     }
