@@ -7,3 +7,5 @@ resource/*.png
 resource/*.pdf
 resource/*.doc
 resource/*.docx
+assets/images/author/*
+!assets/images/author/*.html
