@@ -6,7 +6,7 @@
             </a>
         </li>
         <li class="menu-dropdown mega-menu-dropdown  ">
-            <a href="javascript:;"> Kategori Buku
+            <a href="javascript:;"> Materi
                 <span class="arrow"></span>
             </a>
             <ul class="dropdown-menu" style="min-width: 710px">

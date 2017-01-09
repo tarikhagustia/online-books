@@ -61,7 +61,7 @@ $route['dashboard']['get'] = 'dashboard/userDashboard';
 $route['dashboard/upload']['get'] = 'upload_buku/index';
 $route['dashboard/upload']['post'] = 'upload_buku/save';
 $route['dashboard/upload/success/(:any)']['get'] = 'upload_buku/success_upload/$1';
-$route['book/view/(:any)'] = 'book/view/$1';
+$route['book/view/(:any)'] = 'book/umum/view/$1';
 $route['library/list']['get'] = 'perpustakaan/show';
 $route['category/(:any)']['get'] = 'category/view_category/$1';
 

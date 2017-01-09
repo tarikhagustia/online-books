@@ -49,10 +49,14 @@
                   <div class="row">
                     <div class="col-sm-12">
                         <a href="<?php echo base_url('book/read/'. $book_data->book_url) ?>" class="btn btn-primary">Baca</a>
+                        <?php if ($this->session->login): ?>
                         <?php if ($book_data->library_id == null): ?>
                           <a href="<?= base_url('perpustakaan/simpan/'. $book_data->book_url) ?>" class="btn btn-warning">Simpan Ke Perpustakaan</a>
                         <?php else: ?>
                           <a href="#" class="btn btn-warning" disabled>Materi sudah ada di perpustakaan anda</a>
+                        <?php endif; ?>
+                        <?php else: ?>
+                          <a href="<?= base_url('perpustakaan/simpan/'. $book_data->book_url) ?>" class="btn btn-warning">Simpan Ke Perpustakaan</a>
                         <?php endif; ?>
                     </div>
                   </div>
