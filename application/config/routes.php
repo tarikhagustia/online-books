@@ -97,4 +97,7 @@ $route['myadmin/article/edit']['post'] = 'admin_article/edit_save';
 
 /* ====================== ARTICLE ========================== */
 $route['faqs'] = 'article/faqs';
+$route['article'] = 'article/article_list';
+$route['article/read/(:any)\.html'] = 'article/article_read/$1';
+
 $route['logout']['get'] = 'auth/logout';
