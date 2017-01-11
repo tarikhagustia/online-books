@@ -51,29 +51,29 @@
               <div class="menu_section">
                 <h3></h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Materi <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-book"></i> Materi <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url('myadmin/materi') ?>"> List Materi </a></li>
                       <li><a href="<?php echo base_url('myadmin/materi/upload') ?>"> Upload </a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Pengguna <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-user"></i> Pengguna <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url('myadmin/user/new') ?>"> Buat pengguna </a></li>
                       <li><a href="<?php echo base_url('myadmin/user/list') ?>"> List Pengguna </a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Kategori <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-cubes"></i> Kategori <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url('myadmin/category') ?>"> Atur Kategori </a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Profile Author <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-user"></i> Profile Author <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url('myadmin/author/edit') ?>"> Ganti Profile </a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Artikel & FAQs <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-pencil"></i> Artikel & FAQs <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url('myadmin/article/new') ?>"> Buat Baru </a></li>
                       <li><a href="<?php echo base_url('myadmin/article/list') ?>"> List Artikel & FAQs </a></li>
