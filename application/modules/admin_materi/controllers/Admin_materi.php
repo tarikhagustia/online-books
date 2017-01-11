@@ -58,34 +58,10 @@ class Admin_materi extends AdminController
     if($this->form_validation->run($this) == false):
       $this->edit($this->input->post('book_id'));
     else:
-      // if(!empty($_FILES['book_cover']['error'] == 0)):
-      //   // Upload cover
-      //   $config['upload_path'] = $upload_dir;
-      //   $config['allowed_types'] = 'jpg|png';
-      //   $config['max_size']     = '600';
-      //
-      //   // $this->load->library('upload', $config);
-      //
-      //   // Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
-      //   $this->upload->initialize($config);
-      //   if ( ! $this->upload->do_upload('book_cover'))
-      //    {
-      //            $this->session->set_flashdata('danger', $this->upload->display_errors());
-      //            $cover_upload = false;
-      //            redirect('myadmin/materi/edit/'. $this->input->post('book_id'));
-      //           //  $this->load->view('upload_form', $error);
-      //    }
-      //    else
-      //    {
-      //       $data = array('upload_data' => $this->upload->data());
-      //       $cover_path = $upload_dir . $this->upload->data('file_name');
-      //       $data['book_images'] = $cover_path;
-      //       $cover_upload = true;
-      //    }
-      // endif;
       $cover_upload = true;
       if(!empty($_FILES['book_source']['error'] == 0)):
         //  Book Source
+        // die();
         $config['upload_path'] = $upload_dir . 'books/';
         $config['allowed_types'] = 'pdf|doc|ppt';
         $config['file_name'] = $this->format->seoUrl($this->input->post('book_name'));
@@ -96,12 +72,12 @@ class Admin_materi extends AdminController
 
             $this->session->set_flashdata('status', $this->upload->display_errors());
             $book_upload = false;
-            // redirect('myadmin/materi/upload');
+            redirect('myadmin/materi/upload');
          }
          else
          {
             $data = array('upload_data' => $this->upload->data());
-            $book_path = $upload_dir . 'book/' . $this->upload->data('file_name');
+            $book_path = $upload_dir . 'books/' . $this->upload->data('file_name');
             $data['book_source'] = $book_path;
             $book_upload = true;
          }
@@ -121,6 +97,11 @@ class Admin_materi extends AdminController
            'is_free' => $is_free,
            'is_active' => true
          ];
+         if(!empty($_FILES['book_source']['error'] == 0)):
+           $data['book_source'] = $book_path;
+         endif;
+        //  var_dump($data);
+        //  die();
          $this->db->where('book_id', $this->input->post('book_id'))
          ->update('book', $data);
          redirect('myadmin/materi');
