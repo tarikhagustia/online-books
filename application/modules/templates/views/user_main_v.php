@@ -43,7 +43,7 @@
                             <div class="container">
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo" style="height: auto; margin-bottom: 10px;">
-                                    <a href="index.html">
+                                    <a href="<?= base_url() ?>">
                                         <img src="<?php echo base_url('assets/images/logo.png') ?>" alt="logo" class="logo-default img-responsive" height="50" width="150">
                                     </a>
                                 </div>

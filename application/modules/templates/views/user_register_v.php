@@ -39,7 +39,7 @@
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="#">
-                <img src="<?php echo base_url() ?>assets/pages/img/logo-big-white.png" style="height: 17px;" alt="" /> </a>
+                <img src="<?php echo base_url('assets/images/logo.png') ?>"  alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -77,7 +77,6 @@
             </form>
             <!-- END REGISTRATION FORM -->
         </div>
-        <div class="copyright hide"> 2014 © Metronic. Admin Dashboard Template. </div>
         <!-- END LOGIN -->
         <!--[if lt IE 9]>
 <script src="<?php echo base_url() ?>assets/vendors/respond.min.js"></script>
