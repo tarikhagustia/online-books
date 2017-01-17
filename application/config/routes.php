@@ -102,3 +102,9 @@ $route['article/read/(:any)\.html'] = 'article/article_read/$1';
 /* ====================== ACTIVATION ======================== */
 $route['user/activation'] = 'activation/aktifkan';
 $route['logout']['get'] = 'auth/logout';
+
+/* ====================== REGISTER ========================== */
+$route['forget']['get'] = "registration/forget_password";
+$route['forget']['post'] = "registration/forget_password_post";
+$route['forget/password']['get'] = "registration/forget_password_view";
+$route['forget/password/save']['post'] = "registration/forget_password_save";

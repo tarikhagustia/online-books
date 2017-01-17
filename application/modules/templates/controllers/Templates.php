@@ -30,4 +30,12 @@ class Templates extends TemplatesController
   {
     $this->load->view('user_register_v', $data);
   }
+  public function get_user_forget_templates($data)
+  {
+    $this->load->view('user_forget_v', $data);
+  }
+  public function get_user_forget2_templates($data)
+  {
+    $this->load->view('user_forget2_v', $data);
+  }
 }
