@@ -8,10 +8,9 @@
 
     <head>
         <meta charset="utf-8" />
-        <title><?= $this->config->item('client_name') ?></title>
+        <?=(isset($meta) ? meta_tags($meta) : meta_tags());?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Kumpulan materi kuliah lengkap" name="description" />
         <meta content="<?= $this->config->item('vendor_name') ?>" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
@@ -43,9 +42,9 @@
                         <div class="page-header-top">
                             <div class="container">
                                 <!-- BEGIN LOGO -->
-                                <div class="page-logo">
+                                <div class="page-logo" style="height: auto; margin-bottom: 10px;">
                                     <a href="index.html">
-                                        <img src="<?php echo base_url() ?>assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
+                                        <img src="<?php echo base_url('assets/images/logo.png') ?>" alt="logo" class="logo-default img-responsive" height="50" width="150">
                                     </a>
                                 </div>
                                 <!-- END LOGO -->
@@ -137,7 +136,7 @@
                                     </div>
                                     <!-- END PAGE TITLE -->
                                     <!-- BEGIN PAGE TOOLBAR -->
-                                    
+
                                     <!-- END PAGE TOOLBAR -->
                                 </div>
                             </div>

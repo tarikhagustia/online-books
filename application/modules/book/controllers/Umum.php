@@ -14,6 +14,8 @@ class Umum extends UserController
     $data['book_data'] = $this->book_m->get_book_data($book_url);
     $data['page_title'] = $data['book_data']->book_name;
     $data['reader'] = $this->book_m->get_last_reader($book_url);
+    $data['meta']['title'] = $data['page_title'];
+    $data['meta']['desc'] = $this->format->text_only($data['book_data']->book_description);
     $data['content'] = 'book/book_v';
     $this->templates->get_main_templates($data);
   }

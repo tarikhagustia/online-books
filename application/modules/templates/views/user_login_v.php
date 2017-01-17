@@ -39,7 +39,7 @@
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="#">
-                <img src="<?php echo base_url() ?>assets/pages/img/logo-big-white.png" style="height: 17px;" alt="" /> </a>
+                <img src="<?php echo base_url('assets/images/logo.png') ?>" style="height: 17px;" alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->

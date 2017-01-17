@@ -16,7 +16,7 @@ class Category extends UserController
     $data['page_title'] = $category_name->category_name;
     $data['content'] = 'category/category_v';
     $data['book_data'] = $this->category_m->get_book_data($category_url);
-
+    $data['meta']['title'] = $data['page_title'];
     $this->templates->get_main_templates($data);
   }
   public function get_category()
