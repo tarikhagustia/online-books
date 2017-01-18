@@ -30,7 +30,7 @@
           <div class="portlet-body">
               <div class="mt-element-card mt-element-overlay">
 
-                <div class="owl-carousel">
+                <div class="owl-carousel owl-theme">
                       <?php foreach ($book_data as $key => $value): ?>
                           <div class="mt-card-item">
                             <div class="mt-card-avatar mt-overlay-1">

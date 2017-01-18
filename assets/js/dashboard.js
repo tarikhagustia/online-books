@@ -8,6 +8,9 @@ $('.owl-carousel').owlCarousel({
     items:4,
     // autoWidth:true,
     nav: false,
+    URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: 'URLHash',
     responsive:{
         0:{
             items:1,
