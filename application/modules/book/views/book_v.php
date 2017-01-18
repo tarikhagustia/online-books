@@ -30,6 +30,9 @@
                   <h1 class="font-green sbold uppercase">
                     <a href="<?php echo base_url('book/read/'. $book_data->book_url) ?>"><?php echo $book_data->book_name ?></a>
                   </h1>
+                  <!-- share -->
+                  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587f554f6ad0a49c"></script>
+                  <div class="addthis_inline_share_toolbox"></div>
                   <div class="book_description">
                     <?php echo $book_data->book_description ?>
                   </div>

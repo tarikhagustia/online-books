@@ -1,3 +1,7 @@
+<?php
+$category = modules::run('category/get_category');
+$potongans = array_chunk($category, 10);
+?>
 <div class="hor-menu  ">
     <ul class="nav navbar-nav">
         <li class="menu-dropdown classic-menu-dropdown ">
@@ -13,15 +17,17 @@
                 <li>
                     <div class="mega-menu-content">
                         <div class="row">
+                            <?php foreach ($potongans as $key => $categorys): ?>
                             <div class="col-md-4">
                                 <ul class="mega-menu-submenu">
-                                  <?php foreach (modules::run('category/get_category') as $key => $value): ?>
+                                  <?php foreach ($categorys as $key => $value): ?>
                                     <li>
-                                        <a href="<?php echo base_url('category/'. $value->category_url) ?>"> <?php echo $value->category_name ?> </a>
+                                      <a href="<?php echo base_url('category/'. $value->category_url) ?>"> <?php echo $value->category_name ?> </a>
                                     </li>
                                   <?php endforeach; ?>
                                 </ul>
                             </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </li>
