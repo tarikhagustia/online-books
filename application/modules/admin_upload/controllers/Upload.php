@@ -43,14 +43,11 @@ class Upload extends AdminController
       $this->index();
     else:
       // Upload cover
-      $config['upload_path'] = $upload_dir;
-      $config['allowed_types'] = 'jpg|png';
-      $config['max_size']     = '600';
 
       // $this->load->library('upload', $config);
 
       // Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
-      $this->upload->initialize($config);
+      // $this->upload->initialize($config);
       // if ( ! $this->upload->do_upload('book_cover'))
       //  {
       //          $this->session->set_flashdata('danger', $this->upload->display_errors());
@@ -67,7 +64,7 @@ class Upload extends AdminController
       $cover_upload = true;
       //  Book Source
       $config['upload_path'] = $upload_dir . 'books/';
-      $config['allowed_types'] = 'pdf|doc|ppt';
+      $config['allowed_types'] = 'pdf|docx|pptx';
       $config['file_name'] = $this->format->seoUrl($this->input->post('book_name'));
       // Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
       $this->upload->initialize($config);
@@ -76,7 +73,7 @@ class Upload extends AdminController
 
           $this->session->set_flashdata('danger', $this->upload->display_errors());
           $book_upload = false;
-          // redirect('myadmin/materi/upload');
+          redirect('myadmin/materi/upload');
        }
        else
        {
@@ -105,7 +102,7 @@ class Upload extends AdminController
          $this->db->insert('book' , $data);
          redirect('myadmin/materi');
        else:
-
+         redirect('myadmin/materi');
        endif;
     endif;
   }

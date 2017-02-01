@@ -13,6 +13,14 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Kumpulan materi kuliah lengkap" name="description" />
         <meta content="<?= $this->config->item('vendor_name') ?>" name="author" />
+        <!-- META BEGIN -->
+        <?php if (isset($metas)): ?>
+          <?php
+          foreach ($metas as $key => $meta):
+          echo "<meta ".$meta['type']."='" .$meta['value'] . "' content='".$meta['content']."' />\n";
+          endforeach;
+          ?>
+        <?php endif; ?>
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url() ?>assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -137,7 +145,7 @@
                                     </div>
                                     <!-- END PAGE TITLE -->
                                     <!-- BEGIN PAGE TOOLBAR -->
-                                    
+
                                     <!-- END PAGE TOOLBAR -->
                                 </div>
                             </div>

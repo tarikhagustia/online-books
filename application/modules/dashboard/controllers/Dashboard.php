@@ -18,6 +18,13 @@ class Dashboard extends UserController
   public function userDashboard()
   {
     // die();
+    $data['metas'] = [
+      [
+        'type' => 'property',
+        'value' => 'og:images',
+        'content' => "Some"
+      ]
+    ];
     add_js(base_url('assets/vendors/owl-carousel/dist/owl.carousel.min.js'));
     add_js(base_url('assets/js/dashboard.js'));
     $data['author'] = $this->dashboard_m->get_author();
