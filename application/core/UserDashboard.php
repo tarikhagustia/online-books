@@ -6,6 +6,7 @@ class UserDashboard extends MX_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->helper('seo_helper');
         $this->load->module('templates');
         if(!$this->session->userdata('login')):
           $this->session->set_flashdata('success', 'Anda harus login terlebih dahulu');

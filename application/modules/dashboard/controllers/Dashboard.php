@@ -29,6 +29,7 @@ class Dashboard extends UserController
     add_js(base_url('assets/js/dashboard.js'));
     $data['author'] = $this->dashboard_m->get_author();
     $data['page_title'] = 'Selamat datang di Baca Online';
+    $data['meta']['title'] = $data['page_title'];
     $data['content'] = 'dashboard/home_book_v';
     $data['book_data'] = $this->dashboard_m->get_books();
 

@@ -24,7 +24,9 @@ class Dashboard_m extends CI_Model
   public function get_books()
   {
     $this->db->select('*')->from('book')
-    ->join('category', 'category.category_id = book.category_id');
+    ->join('category', 'category.category_id = book.category_id')
+    ->order_by('book.created_at', 'DESC')
+    ->limit(15);
     $data = $this->db->get();
     return $data->result();
   }

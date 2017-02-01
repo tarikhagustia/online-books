@@ -35,6 +35,7 @@ class Perpustakaan extends UserDashboard
     $data['books'] = $this->perpustakaan_m->get_library();
     $data['content'] = 'perpustakaan/list_v';
     $data['page_title'] = 'Perpustakaan anda';
+    $data['meta']['title'] = $data['page_title'];
     $this->templates->get_main_templates($data);
   }
 }

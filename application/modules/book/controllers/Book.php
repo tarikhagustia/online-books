@@ -27,6 +27,7 @@ class Book extends UserDashboard
       $this->add_reader($data['book']->book_id);
     endif;
     $data['page_title'] = $data['book']->book_name;
+    $data['meta']['title'] = $data['page_title'];
     $data['content'] = 'book/book_read_v';
     $this->templates->get_main_templates($data);
   }

@@ -72,8 +72,18 @@ class Format
 
 
     }
+    public function text_only($str, $start = null, $end = null)
+    {
 
-
+        $t = strip_tags($str);
+        if ($start == null && $end == null):
+        else:
+            $t = substr($t, $start, $end);
+        endif;
+        $pecah = explode('.', $t);
+        $hasil = preg_replace("/&#?[a-z0-9]{2,8};/i","",$pecah[0]);
+        return $hasil;
+    }
     public function date_indonesia($date, $pukul = false)
     {
        $hariData      = array('minggu','senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu');

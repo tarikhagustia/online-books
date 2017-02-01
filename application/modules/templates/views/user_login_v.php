@@ -39,7 +39,7 @@
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="#">
-                <img src="<?php echo base_url() ?>assets/pages/img/logo-big-white.png" style="height: 17px;" alt="" /> </a>
+                <img src="<?php echo base_url('assets/images/logo.png') ?>" alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -81,7 +81,7 @@
                         </label>
                     </div>
                     <div class="pull-right forget-password-block">
-                        <!-- <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a> -->
+                        <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
                     </div>
                 </div>
                 <div class="create-account">
@@ -92,7 +92,8 @@
             </form>
             <!-- END LOGIN FORM -->
             <!-- BEGIN FORGOT PASSWORD FORM -->
-            <form class="forget-form" action="index.html" method="post">
+            <!-- <form class="forget-form" action="index.html" method="post"> -->
+              <?php echo form_open('forget', ['class' => 'forget-form"']) ?>
                 <div class="form-title">
                     <span class="form-title">Forget Password ?</span>
                     <span class="form-subtitle">Enter your e-mail to reset it.</span>
@@ -106,7 +107,6 @@
             </form>
             <!-- END FORGOT PASSWORD FORM -->
         </div>
-        <div class="copyright hide"> 2014 © Metronic. Admin Dashboard Template. </div>
         <!-- END LOGIN -->
         <!--[if lt IE 9]>
 <script src="<?php echo base_url() ?>assets/vendors/respond.min.js"></script>

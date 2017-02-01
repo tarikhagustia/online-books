@@ -29,10 +29,9 @@
           </div>
           <div class="portlet-body">
               <div class="mt-element-card mt-element-overlay">
-                  <div class="row owl-carousel">
-                    <div class="">
+
+                <div class="owl-carousel owl-theme">
                       <?php foreach ($book_data as $key => $value): ?>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                           <div class="mt-card-item">
                             <div class="mt-card-avatar mt-overlay-1">
                               <img src="<?php echo base_url('images/thumb_create/?image=' . base64_encode($value->book_source )) ?>" />
@@ -54,10 +53,9 @@
                               </p>
                             </div>
                           </div>
-                        </div>
                       <?php endforeach; ?>
                     </div>
-                  </div>
+
               </div>
           </div>
       </div>

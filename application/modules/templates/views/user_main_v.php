@@ -8,10 +8,9 @@
 
     <head>
         <meta charset="utf-8" />
-        <title><?= $this->config->item('client_name') ?></title>
+        <?=(isset($meta) ? meta_tags($meta) : meta_tags());?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Kumpulan materi kuliah lengkap" name="description" />
         <meta content="<?= $this->config->item('vendor_name') ?>" name="author" />
         <!-- META BEGIN -->
         <?php if (isset($metas)): ?>
@@ -51,9 +50,9 @@
                         <div class="page-header-top">
                             <div class="container">
                                 <!-- BEGIN LOGO -->
-                                <div class="page-logo">
-                                    <a href="index.html">
-                                        <img src="<?php echo base_url() ?>assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
+                                <div class="page-logo" style="height: auto; margin-bottom: 10px;">
+                                    <a href="<?= base_url() ?>">
+                                        <img src="<?php echo base_url('assets/images/logo.png') ?>" alt="logo" class="logo-default img-responsive" height="50" width="150">
                                     </a>
                                 </div>
                                 <!-- END LOGO -->
